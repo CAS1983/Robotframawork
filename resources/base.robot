@@ -1,25 +1,20 @@
 ***Settings***
-Documentation       Aqui teremos a estrutura base do projeto, o selenium é importanto aqui
+Documentation       Codigo base para abrir uma sessao com o Appium Server
 
-Library     SeleniumLibrary
-Library     RequestsLibrary
-Library     OperatingSystem
-
-Resource    elements.robot
+Library     AppiumLibrary
 Resource    kws.robot
-Resource    helpers.robot
-
-***Variables***
-${base_url}         http://ninjachef-qaninja-io.umbler.net/
-${api_url}          http://ninjachef-api-qaninja-io.umbler.net
 
 ***Keywords***
-## Hooks
+# Hooks
 Open Session
-    Open Browser    about:blank     chrome
+    Open Application        http://localhost:4723/wd/hub        
+    ...                     automationName=UiAutomator2
+    ...                     platformName=Android
+    ...                     deviceName=Emulator
+    ...                     app=${EXECDIR}/app/ninjachef.apk
+    ...                     udid=emulator-5554
+    ...                     adbExecTimeout=120000
 
 Close Session
     Capture Page Screenshot
-    Close Browser
-
-
+    Close Application
