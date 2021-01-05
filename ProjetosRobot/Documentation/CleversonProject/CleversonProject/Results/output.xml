@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0a3 (Python 3.9.0 on win32)" generated="20201226 15:16:41.480" rpa="false">
+<suite id="s1" name="SuiteTesteBDD" source="C:\Projects\CleversonProject\Test\SuiteTesteBDD.robot">
+<test id="s1-t1" name="Caso de teste 01: Pesquisar produto Existente">
+<kw name="Abrir Navegador" library="Comum" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201226 15:16:41.693" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201226 15:16:41.692" endtime="20201226 15:16:44.837"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201226 15:16:44.837" endtime="20201226 15:16:46.959"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://automationpractice.com</arg>
+</arguments>
+<msg timestamp="20201226 15:16:46.960" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<status status="PASS" starttime="20201226 15:16:46.959" endtime="20201226 15:16:54.410"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:41.692" endtime="20201226 15:16:54.411"></status>
+</kw>
+<kw name="Dado" library="BDDpt-BR">
+<arguments>
+<arg>Acessar a página HOME do Site</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>@{keyword}</arg>
+</arguments>
+<kw name="Acessar a página HOME do Site" library="AutomationPractice">
+<kw name="Verificar se está na página Principal" library="PaginaDestino">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Popular</arg>
+</arguments>
+<status status="PASS" starttime="20201226 15:16:54.413" endtime="20201226 15:16:54.428"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:54.412" endtime="20201226 15:16:54.428"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:54.412" endtime="20201226 15:16:54.428"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:54.412" endtime="20201226 15:16:54.428"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:54.411" endtime="20201226 15:16:54.428"></status>
+</kw>
+<kw name="Quando" library="BDDpt-BR">
+<arguments>
+<arg>Preencher o campo de pesquisa com</arg>
+<arg>${PESQUISA}</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>@{keyword}</arg>
+</arguments>
+<kw name="Preencher o campo de pesquisa com" library="AutomationPractice">
+<arguments>
+<arg>Blouse</arg>
+</arguments>
+<kw name="Preencher a Pesquisa com" library="MenuSuperior">
+<arguments>
+<arg>${arg}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${MENU_CAMPO_PESQUISA}</arg>
+<arg>${arg}</arg>
+<arg>clear=True</arg>
+</arguments>
+<msg timestamp="20201226 15:16:54.431" level="INFO">Typing text 'Blouse' into text field 'xpath://*[@id="search_query_top"]'.</msg>
+<status status="PASS" starttime="20201226 15:16:54.430" endtime="20201226 15:16:54.532"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:54.430" endtime="20201226 15:16:54.533"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:54.430" endtime="20201226 15:16:54.533"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:54.429" endtime="20201226 15:16:54.533"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:54.429" endtime="20201226 15:16:54.533"></status>
+</kw>
+<kw name="E" library="BDDpt-BR">
+<arguments>
+<arg>Clicar no Botão Pesquisar</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>@{keyword}</arg>
+</arguments>
+<kw name="Clicar no Botão Pesquisar" library="AutomationPractice">
+<kw name="Apertar no Botão Pesquisar" library="MenuSuperior">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${MENU_BT_PESQUISA}</arg>
+</arguments>
+<msg timestamp="20201226 15:16:54.536" level="INFO">Clicking element 'xpath://span[text()="Search"]/..'.</msg>
+<status status="PASS" starttime="20201226 15:16:54.536" endtime="20201226 15:16:58.123"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:54.535" endtime="20201226 15:16:58.124"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:54.535" endtime="20201226 15:16:58.124"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:54.534" endtime="20201226 15:16:58.124"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:54.534" endtime="20201226 15:16:58.124"></status>
+</kw>
+<kw name="Então" library="BDDpt-BR">
+<arguments>
+<arg>Página retorna no resultado o produto</arg>
+<arg>${PESQUISA}</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>@{keyword}</arg>
+</arguments>
+<kw name="Página retorna no resultado o produto" library="AutomationPractice">
+<arguments>
+<arg>Blouse</arg>
+</arguments>
+<kw name="Verificar se o Produto Pesquisado Aparece" library="PaginaDestino">
+<arguments>
+<arg>${arg}</arg>
+</arguments>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>//div[2]/h5/a[contains(text(),"</arg>
+<arg>${arg}</arg>
+<arg>")]</arg>
+</arguments>
+<assign>
+<var>${LANDINGPAGE_RESULT}</var>
+</assign>
+<msg timestamp="20201226 15:16:58.127" level="INFO">${LANDINGPAGE_RESULT} = //div[2]/h5/a[contains(text(),"Blouse")]</msg>
+<status status="PASS" starttime="20201226 15:16:58.127" endtime="20201226 15:16:58.127"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>${LANDINGPAGE_RESULT}</arg>
+<arg>${arg}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20201226 15:16:58.128" endtime="20201226 15:16:58.190"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:58.126" endtime="20201226 15:16:58.190"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:58.126" endtime="20201226 15:16:58.191"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:58.125" endtime="20201226 15:16:58.191"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:58.125" endtime="20201226 15:16:58.191"></status>
+</kw>
+<kw name="Fechar Navegador" library="Comum" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20201226 15:16:58.192" endtime="20201226 15:17:00.416"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:58.192" endtime="20201226 15:17:00.416"></status>
+</kw>
+<status status="PASS" starttime="20201226 15:16:41.691" endtime="20201226 15:17:00.417"></status>
+</test>
+<status status="PASS" starttime="20201226 15:16:41.482" endtime="20201226 15:17:00.422"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SuiteTesteBDD">SuiteTesteBDD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
