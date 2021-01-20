@@ -10,8 +10,8 @@ Teste FOR usando várias listas
 ### Usando várias listas
 Cria dicionário de traduções
     FOR        ${index}        ${english}        ${finnish}        ${portugues}    IN     
-    ...        1                Cat              kissa              gato
-    ...        2                dog              koira              cachorro
-    ...        3                horse            hevonen            cavalo
+    ...        1                bear             Karhu              urso
+    ...        2                wolf             Susi               Lobo
+    ...        3                Ferret           Fretti             furão
         Log    Animal    ${index}:\nEn inglês: ${english}\nEn finlandês: ${finnish}\nEn português: ${portugues}
     END  
